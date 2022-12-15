@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .header-container {
   height: 70px;
   width: 100%;
@@ -67,7 +63,7 @@ html {
 
 .bump {
   -webkit-animation: bump 300ms ease-out;
-  animation: bump 300ms ease-out;
+          animation: bump 300ms ease-out;
 }
 
 @-webkit-keyframes bump {
@@ -114,10 +110,15 @@ html {
 }
 .logo-wrapper h1 {
   font-family: "Nerko One", cursive;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: black;
 }
 
+@media (max-width: 375px) {
+  .logo-wrapper h1 {
+    font-size: 1.4rem;
+  }
+}
 .header-menu-wrapper {
   display: flex;
   justify-content: flex-start;
@@ -184,6 +185,11 @@ html {
   color: rgb(255, 255, 255);
 }
 
+@media (max-width: 375px) {
+  .section-one-info {
+    font-size: 1.6rem;
+  }
+}
 .ordernow-btn {
   margin-top: 50px;
   height: 45px;
@@ -201,6 +207,10 @@ html {
 .ordernow-btn a {
   text-decoration: none;
   color: black;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .breaker {
@@ -447,8 +457,7 @@ html {
   border-radius: 25px;
   margin-left: 1rem;
 }
-.actions-close-order button:hover,
-.actions-close-order button:active {
+.actions-close-order button:hover, .actions-close-order button:active {
   background-color: black;
   border-color: black;
   color: white;
@@ -478,8 +487,7 @@ html {
   border-radius: 25px;
   margin-left: 1rem;
 }
-.button-finished:hover,
-.button-finished:active {
+.button-finished:hover, .button-finished:active {
   background-color: black;
   border-color: black;
   color: white;
@@ -506,7 +514,7 @@ html {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
   -webkit-animation: slide-down 300ms ease-out forwards;
-  animation: slide-down 300ms ease-out forwards;
+          animation: slide-down 300ms ease-out forwards;
 }
 
 @media (min-width: 768px) {
@@ -562,8 +570,7 @@ html {
   margin-left: 1rem;
   margin: 0.25rem;
 }
-.cart-item button:hover,
-.cart-item button:active {
+.cart-item button:hover, .cart-item button:active {
   background-color: rgb(0, 255, 221);
   color: black;
 }
@@ -662,8 +669,7 @@ html {
   border: none;
   border-radius: 25px;
 }
-.checkout-info-actions button:hover,
-.checkout-info-actions button:active {
+.checkout-info-actions button:hover, .checkout-info-actions button:active {
   background-color: black;
   color: white;
 }
@@ -686,4 +692,4 @@ html {
 .checkout-invalid input {
   border-color: #aa0b20;
   background-color: #ffeff1;
-} /*# sourceMappingURL=main.module.css.map */
+}/*# sourceMappingURL=main.module.css.map */

@@ -1,5 +1,9 @@
 @use "../../../variables" as s;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .breaker {
   display: flex;
   flex-direction: column;

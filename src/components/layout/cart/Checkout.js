@@ -34,7 +34,7 @@ const Checkout = (props) => {
     const enteredFirstNameIsValid = !isEmpty(enteredFirstName);
     const enteredLastNameIsValid = !isEmpty(enteredLastName);
     const enteredStreetIsValid = !isEmpty(enteredStreet);
-    const enteredPostalCodeIsValid = !isPostalCode(enteredPostalCode);
+    const enteredPostalCodeIsValid = isPostalCode(enteredPostalCode);
     const enteredCityIsValid = !isEmpty(enteredCity);
     const enteredStateIsValid = !isEmpty(enteredState);
 

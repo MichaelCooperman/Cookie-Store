@@ -9,7 +9,15 @@
 
   h1 {
     font-family: "Nerko One", cursive;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: black;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo-wrapper {
+    h1 {
+      font-size: 1.4rem;
+    }
   }
 }
