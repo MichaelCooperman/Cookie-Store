@@ -112,6 +112,7 @@
   font-family: "Nerko One", cursive;
   font-size: 1.8rem;
   color: black;
+  white-space: nowrap;
 }
 
 @media (max-width: 375px) {
@@ -185,9 +186,12 @@
   color: rgb(255, 255, 255);
 }
 
-@media (max-width: 375px) {
-  .section-one-info {
-    font-size: 1.6rem;
+@media (max-width: 405px) {
+  .section-one-info h1 {
+    font-size: 4rem;
+  }
+  .section-one-info h2 {
+    font-size: 2rem;
   }
 }
 .ordernow-btn {
@@ -334,7 +338,7 @@ html {
   font-family: "Nerko One", cursive;
   font-size: 1.2rem;
   border: 2px solid black;
-  border-right: none;
+  border-right: 1px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   height: 30px;
