@@ -1,0 +1,22 @@
+@use "../../../variables" as s;
+
+.menu-buttons {
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    margin: 5px;
+    font-size: 1.5rem;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}

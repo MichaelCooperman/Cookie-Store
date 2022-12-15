@@ -1,0 +1,26 @@
+@use "../../../variables" as s;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  height: 70px;
+  width: 100%;
+  background-color: s.$mainBlue;
+  border-bottom: 2px solid black;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header {
+  height: 65px;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

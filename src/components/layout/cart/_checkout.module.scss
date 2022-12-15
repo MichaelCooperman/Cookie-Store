@@ -1,0 +1,83 @@
+@use "../../../variables" as s;
+
+.checkout-info-form {
+  margin: 1rem 0;
+  height: auto;
+  overflow: auto;
+}
+
+.checkout-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  p {
+    font-family: s.$fontFamily;
+  }
+}
+
+.checkout-info-control {
+  margin-bottom: 0.5rem;
+}
+
+.checkout-info-control label {
+  font-family: s.$fontFamily;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.checkout-info-control input {
+  font-family: s.$fontFamily;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 12rem;
+  max-width: 100%;
+}
+
+.checkout-info-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 110px;
+    font-family: s.$fontFamily;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+
+    &:hover,
+    &:active {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+.checkout-info-actions .checkout-info-submit {
+  border: 2px solid black;
+  background-color: s.$mainBlue;
+  color: white;
+}
+
+.checkout-info-actions .checkout-info-submit:hover,
+.checkout-info-actions .checkout-info-submit:active {
+  background-color: black;
+}
+
+.checkout-invalid label {
+  color: #ca3e51;
+}
+
+.checkout-invalid input {
+  border-color: #aa0b20;
+  background-color: #ffeff1;
+}

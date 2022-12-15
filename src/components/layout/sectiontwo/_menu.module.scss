@@ -1,0 +1,38 @@
+@use "../../../variables" as s;
+
+.breaker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 175px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: s.$fontFamily;
+
+  a {
+    text-decoration: none;
+    color: s.$mainBlue;
+    margin-top: 5px;
+  }
+}
+
+.menu-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: s.$mainBlue;
+}
+
+.cookies-loading {
+  text-align: center;
+  color: black;
+  font-family: s.$fontFamily;
+}
+
+.cookies-error {
+  text-align: center;
+  color: red;
+  font-family: s.$fontFamily;
+}

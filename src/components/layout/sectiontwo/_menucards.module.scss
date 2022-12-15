@@ -1,0 +1,43 @@
+@use "../../../variables" as s;
+
+.menu-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  background-color: s.$mainBlue;
+  padding: 20px 0;
+}
+
+.menu-image {
+  height: 250px;
+}
+
+.menu-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: s.$fontFamily;
+  color: s.$fontColor;
+
+  h1 {
+    font-size: 2.2rem;
+    color: white;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: s.$fontColor;
+  }
+}
+
+.menu-extras {
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    margin: 5px 10px;
+  }
+}

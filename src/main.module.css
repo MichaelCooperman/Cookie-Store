@@ -1,0 +1,689 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header-container {
+  height: 70px;
+  width: 100%;
+  background-color: rgb(0, 255, 221);
+  border-bottom: 2px solid black;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header {
+  height: 65px;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.checkoutcart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 60px;
+  border-style: none;
+  border-radius: 20px;
+  border-width: 1px;
+  background-color: rgb(0, 255, 221);
+}
+.checkoutcart-btn:hover {
+  transition: all 0.4s ease;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.checkoutcart {
+  height: 20px;
+  width: 20px;
+}
+
+.badge {
+  font-size: 1.5rem;
+  font-family: "Nerko One", cursive;
+}
+
+.bump {
+  -webkit-animation: bump 300ms ease-out;
+  animation: bump 300ms ease-out;
+}
+
+@-webkit-keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.logo-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.logo-wrapper h1 {
+  font-family: "Nerko One", cursive;
+  font-size: 2.2rem;
+  color: black;
+}
+
+.header-menu-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+}
+
+.hamburger {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 24px;
+  height: 13px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 20px;
+  height: 2.5px;
+  background-color: black;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(5px);
+}
+
+.hamburger-bottom {
+  transform: translateY(10px);
+}
+
+.section-one-wrapper {
+  height: 500px;
+  width: 100%;
+}
+
+.background {
+  height: 500px;
+  width: 100%;
+  background-image: url("./images/background-cookies.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.section-one-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.5);
+  font-family: "Nerko One", cursive;
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+}
+
+.ordernow-btn {
+  margin-top: 50px;
+  height: 45px;
+  width: 115px;
+  border-radius: 25px;
+  border: 2px solid black;
+  background-color: rgb(0, 255, 221);
+  font-family: "Nerko One", cursive;
+  font-size: 1.1rem;
+}
+.ordernow-btn:hover {
+  background-color: white;
+  transition: all 0.1s ease;
+}
+.ordernow-btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.breaker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 175px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: "Nerko One", cursive;
+}
+.breaker a {
+  text-decoration: none;
+  color: rgb(0, 255, 221);
+  margin-top: 5px;
+}
+
+.menu-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(0, 255, 221);
+}
+
+.cookies-loading {
+  text-align: center;
+  color: black;
+  font-family: "Nerko One", cursive;
+}
+
+.cookies-error {
+  text-align: center;
+  color: red;
+  font-family: "Nerko One", cursive;
+}
+
+.menu-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.menu-buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  margin: 5px;
+  font-size: 1.5rem;
+}
+.menu-buttons button:hover {
+  background-color: black;
+  color: white;
+}
+
+.menu-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(0, 255, 221);
+  padding: 20px 0;
+}
+
+.menu-image {
+  height: 250px;
+}
+
+.menu-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Nerko One", cursive;
+  color: rgb(34, 34, 34);
+}
+.menu-information h1 {
+  font-size: 2.2rem;
+  color: white;
+}
+.menu-information p {
+  font-size: 1.2rem;
+  color: rgb(34, 34, 34);
+}
+
+.menu-extras {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-extras span {
+  margin: 5px 10px;
+}
+
+.menu-form {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+}
+.menu-form button {
+  font-family: "Nerko One", cursive;
+  height: 34px;
+  width: 70px;
+  border: 2px solid black;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.menu-form button:hover {
+  background-color: black;
+  color: white;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.input input {
+  font-family: "Nerko One", cursive;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 30px;
+  width: 19px;
+  padding-left: 11px;
+}
+.input input::-webkit-outer-spin-button,
+.input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.section-three-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: black;
+}
+
+.section-three-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.5rem;
+  color: white;
+  background-color: black;
+}
+
+.section-three-left {
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  width: 50%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section-three-left a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 10px;
+  font-family: "Nerko One", cursive;
+}
+.section-three-left a:hover {
+  color: rgb(0, 255, 221);
+}
+
+.section-three-right {
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  width: 50%;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  flex-wrap: wrap;
+}
+.icon-container a {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+}
+.icon-container a:hover {
+  color: rgb(0, 255, 221);
+}
+
+.icon-size {
+  height: 30px;
+  width: 30px;
+}
+
+@media (min-width: 1600px) {
+  .section-three-left a {
+    font-size: 1.2rem;
+    margin: 0px 20px;
+  }
+  .icon-size {
+    height: 40px;
+    width: 40px;
+    margin: 0px 20px;
+  }
+}
+.cart-items {
+  font-family: "Nerko One", cursive;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 320px;
+  overflow: auto;
+}
+
+.total {
+  font-family: "Nerko One", cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.actions-close-order {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: right;
+  font-family: "Nerko One", cursive;
+}
+.actions-close-order button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+.actions-close-order button:hover,
+.actions-close-order button:active {
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+.actions-close-order .button-alt {
+  color: black;
+}
+.actions-close-order .order-button {
+  background-color: rgb(0, 255, 221);
+  color: white;
+}
+
+.complete-close-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-family: "Nerko One", cursive;
+}
+
+.button-finished {
+  font: inherit;
+  cursor: pointer;
+  background-color: rgb(0, 255, 221);
+  border: 1px solid black;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+.button-finished:hover,
+.button-finished:active {
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+  position: fixed;
+  top: 15vh;
+  left: 5%;
+  width: 84%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  -webkit-animation: slide-down 300ms ease-out forwards;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
+@-webkit-keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgb(0, 255, 221);
+  padding: 16px 0;
+  margin: 16px 0;
+}
+.cart-item h2 {
+  text-align: center;
+  margin: 0 0 8px 0;
+  color: black;
+}
+.cart-item button {
+  font: inherit;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: black;
+  border: 2px solid black;
+  width: 3rem;
+  text-align: center;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin: 0.25rem;
+}
+.cart-item button:hover,
+.cart-item button:active {
+  background-color: rgb(0, 255, 221);
+  color: black;
+}
+
+.cart-helper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summary {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.amount {
+  text-align: center;
+  font-weight: bold;
+  padding: 2px 10px;
+  color: black;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-cookie-img {
+  height: 100px;
+}
+
+@media (min-width: 768px) {
+  .actions {
+    flex-direction: row;
+  }
+}
+.checkout-info-form {
+  margin: 1rem 0;
+  height: auto;
+  overflow: auto;
+}
+
+.checkout-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.checkout-info-wrapper p {
+  font-family: "Nerko One", cursive;
+}
+
+.checkout-info-control {
+  margin-bottom: 0.5rem;
+}
+
+.checkout-info-control label {
+  font-family: "Nerko One", cursive;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.checkout-info-control input {
+  font-family: "Nerko One", cursive;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 12rem;
+  max-width: 100%;
+}
+
+.checkout-info-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.checkout-info-actions button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 110px;
+  font-family: "Nerko One", cursive;
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+}
+.checkout-info-actions button:hover,
+.checkout-info-actions button:active {
+  background-color: black;
+  color: white;
+}
+
+.checkout-info-actions .checkout-info-submit {
+  border: 2px solid black;
+  background-color: rgb(0, 255, 221);
+  color: white;
+}
+
+.checkout-info-actions .checkout-info-submit:hover,
+.checkout-info-actions .checkout-info-submit:active {
+  background-color: black;
+}
+
+.checkout-invalid label {
+  color: #ca3e51;
+}
+
+.checkout-invalid input {
+  border-color: #aa0b20;
+  background-color: #ffeff1;
+} /*# sourceMappingURL=main.module.css.map */
