@@ -325,6 +325,7 @@ html {
   border: 2px solid black;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  color: black;
 }
 .menu-form button:hover {
   background-color: black;
