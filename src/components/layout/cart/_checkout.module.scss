@@ -81,3 +81,17 @@
   border-color: #aa0b20;
   background-color: #ffeff1;
 }
+
+@media (max-width: 500px) {
+  .checkout-info-wrapper {
+    input {
+      width: 100px;
+    }
+
+    p {
+      font-size: 0.8rem;
+      height: auto;
+      width: 100px;
+    }
+  }
+}
