@@ -34,9 +34,9 @@ const Checkout = (props) => {
     const enteredFirstNameIsValid = !isEmpty(enteredFirstName);
     const enteredLastNameIsValid = !isEmpty(enteredLastName);
     const enteredStreetIsValid = !isEmpty(enteredStreet);
-    const enteredPostalCodeIsValid = !isEmpty(enteredPostalCode);
+    const enteredPostalCodeIsValid = !isPostalCode(enteredPostalCode);
     const enteredCityIsValid = !isEmpty(enteredCity);
-    const enteredStateIsValid = isPostalCode(enteredState);
+    const enteredStateIsValid = !isEmpty(enteredState);
 
     setFormInputIsValid({
       firstName: enteredFirstNameIsValid,
