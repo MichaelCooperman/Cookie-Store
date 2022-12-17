@@ -5,7 +5,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  max-height: 320px;
+  max-height: 380px;
   overflow: auto;
 }
 
@@ -48,8 +48,8 @@
   }
 
   .order-button {
-    background-color: #8c7851;
-    color: white;
+    background-color: s.$btnBackground;
+    color: black;
   }
 }
 
@@ -57,6 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
   font-size: 1.1rem;
   font-family: s.$fontFamily;
 }
@@ -65,7 +66,7 @@
   font: inherit;
   cursor: pointer;
 
-  background-color: #8c7851;
+  background-color: s.$btnBackground;
   border: 1px solid black;
   padding: 0.5rem 2rem;
   border-radius: 25px;

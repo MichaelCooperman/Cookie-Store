@@ -15,13 +15,12 @@
   width: 95%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .nav-bar {
   height: 100%;
-  width: 40%;
+  width: 30%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -50,6 +49,7 @@
   align-items: center;
   height: 40px;
   width: 60px;
+  min-width: 40px;
   border-style: none;
   border-radius: 20px;
   border-width: 1px;
@@ -113,11 +113,19 @@
     transform: scale(1);
   }
 }
+@media (max-width: 480px) {
+  .checkout-wrapper {
+    width: 40%;
+  }
+  .nav-bar {
+    display: none;
+  }
+}
 .logo-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 50%;
+  width: 60%;
   height: 100%;
 }
 .logo-wrapper h1 {
@@ -132,8 +140,37 @@
 }
 
 @media (max-width: 375px) {
+  .logo-wrapper {
+    justify-content: center;
+    align-items: flex-start;
+  }
   .logo-wrapper h1 {
     font-size: 1.4rem;
+  }
+  .small-nav-bar {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .logo-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .small-nav-bar {
+    display: flex;
+  }
+  .small-nav-bar a {
+    text-decoration: none;
+    color: #d4af37;
+    padding: 5px;
+  }
+  .small-nav-bar a:hover {
+    color: white;
+  }
+}
+@media (min-width: 480px) {
+  .small-nav-bar {
+    display: none;
   }
 }
 .header-menu-wrapper {
@@ -507,7 +544,7 @@ h1 {
   list-style: none;
   margin: 0;
   padding: 0;
-  max-height: 320px;
+  max-height: 380px;
   overflow: auto;
 }
 
@@ -546,14 +583,15 @@ h1 {
   color: black;
 }
 .actions-close-order .order-button {
-  background-color: #8c7851;
-  color: white;
+  background-color: #d4af37;
+  color: black;
 }
 
 .complete-close-order {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
   font-size: 1.1rem;
   font-family: "Nerko One", cursive;
 }
@@ -561,7 +599,7 @@ h1 {
 .button-finished {
   font: inherit;
   cursor: pointer;
-  background-color: #8c7851;
+  background-color: #d4af37;
   border: 1px solid black;
   padding: 0.5rem 2rem;
   border-radius: 25px;
@@ -588,7 +626,9 @@ h1 {
   position: fixed;
   top: 15vh;
   left: 5%;
-  width: 84%;
+  right: 5%;
+  margin: auto;
+  width: 80%;
   background-color: white;
   padding: 1rem;
   border-radius: 14px;
@@ -642,7 +682,7 @@ h1 {
   font-weight: bold;
   font-size: 1.25rem;
   color: black;
-  border: 2px solid black;
+  border: 1px solid black;
   width: 3rem;
   text-align: center;
   border-radius: 6px;
@@ -663,7 +703,7 @@ h1 {
 }
 
 .summary {
-  width: 160px;
+  width: 170px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -686,6 +726,14 @@ h1 {
 .actions {
   display: flex;
   flex-direction: column;
+}
+.actions button {
+  background-color: #d4af37;
+  color: black;
+}
+.actions button:hover {
+  background-color: black;
+  color: white;
 }
 
 .cart-cookie-img {
@@ -757,7 +805,7 @@ h1 {
   font-size: 1.2rem;
   cursor: pointer;
   background-color: transparent;
-  border: none;
+  border: 1px solid black;
   border-radius: 25px;
 }
 .checkout-info-actions button:hover, .checkout-info-actions button:active {
@@ -767,8 +815,8 @@ h1 {
 
 .checkout-info-actions .checkout-info-submit {
   border: 2px solid black;
-  background-color: #8c7851;
-  color: white;
+  background-color: #d4af37;
+  color: black;
 }
 
 .checkout-info-actions .checkout-info-submit:hover,
@@ -821,14 +869,15 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 90%;
+  width: 100%;
   margin: auto;
   height: 100%;
   padding: 50px 0;
 }
 
 .about-cards {
-  border-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .about-cards,
@@ -847,9 +896,26 @@ h1 {
 .about-card-middle {
   align-self: flex-end;
   text-align: end;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
+@media (max-width: 425px) {
+  .about-cards-wrapper {
+    align-items: center;
+    width: 90%;
+    padding: 25px 0;
+  }
+  .about-cards,
+.about-card-middle {
+    border-radius: 20px;
+    margin: 25px 0;
+  }
+  .about-card-middle {
+    text-align: start;
+    align-self: center;
+  }
+}
 .contact-section {
   scroll-margin-top: 70px;
   width: 100%;
@@ -930,6 +996,15 @@ h1 {
   width: 50%;
 }
 
+@media (max-width: 425px) {
+  .contactus-wrapper {
+    padding: 40px 0;
+  }
+  .contact-container {
+    height: 80%;
+    width: 80%;
+  }
+}
 * {
   margin: 0;
   padding: 0;

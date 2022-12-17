@@ -19,7 +19,7 @@
     font-weight: bold;
     font-size: 1.25rem;
     color: black;
-    border: 2px solid black;
+    border: 1px solid black;
     width: 3rem;
     text-align: center;
     border-radius: 6px;
@@ -43,7 +43,7 @@
 }
 
 .summary {
-  width: 160px;
+  width: 170px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,6 +66,16 @@
 .actions {
   display: flex;
   flex-direction: column;
+
+  button {
+    background-color: s.$btnBackground;
+    color: black;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
 }
 
 .cart-cookie-img {
@@ -88,10 +98,4 @@
     display: flex;
     flex-direction: row;
   }
-
-  // .summary {
-  //   h2 {
-  //     text-align: left;
-  //   }
-  // }
 }

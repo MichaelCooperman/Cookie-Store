@@ -88,3 +88,14 @@
     }
   }
 }
+
+@media (max-width: 425px) {
+  .contactus-wrapper {
+    padding: 40px 0;
+  }
+
+  .contact-container {
+    height: 80%;
+    width: 80%;
+  }
+}

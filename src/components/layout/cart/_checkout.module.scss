@@ -51,7 +51,7 @@
     font-size: 1.2rem;
     cursor: pointer;
     background-color: transparent;
-    border: none;
+    border: 1px solid black;
     border-radius: 25px;
 
     &:hover,
@@ -64,8 +64,8 @@
 
 .checkout-info-actions .checkout-info-submit {
   border: 2px solid black;
-  background-color: #8c7851;
-  color: white;
+  background-color: s.$btnBackground;
+  color: black;
 }
 
 .checkout-info-actions .checkout-info-submit:hover,

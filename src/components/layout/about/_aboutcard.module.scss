@@ -4,14 +4,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 90%;
+  width: 100%;
   margin: auto;
   height: 100%;
   padding: 50px 0;
 }
 
 .about-cards {
-  border-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .about-cards,
@@ -30,5 +31,25 @@
 .about-card-middle {
   align-self: flex-end;
   text-align: end;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+@media (max-width: 425px) {
+  .about-cards-wrapper {
+    align-items: center;
+    width: 90%;
+    padding: 25px 0;
+  }
+
+  .about-cards,
+  .about-card-middle {
+    border-radius: 20px;
+    margin: 25px 0;
+  }
+
+  .about-card-middle {
+    text-align: start;
+    align-self: center;
+  }
 }

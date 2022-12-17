@@ -2,7 +2,7 @@
 
 .nav-bar {
   height: 100%;
-  width: 40%;
+  width: 30%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -35,6 +35,7 @@
   align-items: center;
   height: 40px;
   width: 60px;
+  min-width: 40px;
   border-style: none;
   border-radius: 20px;
   border-width: 1px;
@@ -80,5 +81,15 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-wrapper {
+    width: 40%;
+  }
+
+  .nav-bar {
+    display: none;
   }
 }
