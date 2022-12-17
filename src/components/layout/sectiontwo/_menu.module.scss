@@ -11,14 +11,22 @@ html {
   align-items: center;
   height: 175px;
   width: 100%;
-  background-color: black;
+  background-color: s.$secondaryColor;
   color: white;
   font-family: s.$fontFamily;
+
+  h1 {
+    color: white;
+  }
 
   a {
     text-decoration: none;
     color: s.$mainBlue;
     margin-top: 5px;
+
+    &:hover {
+      color: #d4af37;
+    }
   }
 }
 
@@ -27,6 +35,7 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   background-color: s.$mainBlue;
+  scroll-margin-top: 70px;
 }
 
 .cookies-loading {

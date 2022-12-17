@@ -5,6 +5,8 @@ import SectionThree from "./components/layout/sectionthree/SectionThree";
 import SectionTwo from "./components/layout/sectiontwo/SectionTwo";
 import Cart from "./components/layout/cart/Cart";
 import CartProvider from "./components/store/CartProvider";
+import About from "./components/layout/about/About";
+import Contact from "./components/layout/contact/Contact";
 
 function App() {
   const [cartIsActive, setCartIsActive] = useState(false);
@@ -18,13 +20,17 @@ function App() {
   };
 
   return (
-    <CartProvider>
-      {cartIsActive && <Cart onClose={hideCartHandler} />}
-      <Header onShowCart={showCartHandler} />
-      <SectionOne />
-      <SectionTwo />
-      <SectionThree />
-    </CartProvider>
+    <main>
+      <CartProvider>
+        {cartIsActive && <Cart onClose={hideCartHandler} />}
+        <Header onShowCart={showCartHandler} />
+        <SectionOne />
+        <SectionTwo />
+        <About />
+        <Contact />
+        <SectionThree />
+      </CartProvider>
+    </main>
   );
 }
 

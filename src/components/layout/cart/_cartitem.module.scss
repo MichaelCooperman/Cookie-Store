@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid s.$mainBlue;
+  border-bottom: 2px solid #8c7851;
   padding: 16px 0;
   margin: 16px 0;
 
@@ -76,4 +76,22 @@
   .actions {
     flex-direction: row;
   }
+}
+
+@media (max-width: 380px) {
+  .cart-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: row;
+  }
+
+  // .summary {
+  //   h2 {
+  //     text-align: left;
+  //   }
+  // }
 }

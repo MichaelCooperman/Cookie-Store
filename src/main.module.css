@@ -1,15 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .header-container {
   height: 70px;
   width: 100%;
-  background-color: rgb(0, 255, 221);
-  border-bottom: 2px solid black;
+  background-color: rgb(34, 34, 34);
+  border-bottom: 2px solid #ad9b79;
   overflow-x: hidden;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   width: 100%;
 }
@@ -23,11 +19,27 @@
   align-items: center;
 }
 
+.nav-bar {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-bar a {
+  text-decoration: none;
+  color: #d4af37;
+  padding: 5px;
+}
+.nav-bar a:hover {
+  color: white;
+}
+
 .checkout-wrapper {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 20%;
+  width: 10%;
   height: 100%;
   overflow: hidden;
 }
@@ -41,15 +53,14 @@
   border-style: none;
   border-radius: 20px;
   border-width: 1px;
-  background-color: rgb(0, 255, 221);
+  background-color: #d4af37;
   color: black;
 }
 .checkoutcart-btn:hover {
   transition: all 0.4s ease;
-  background-color: white;
-  border-color: black;
+  border-color: white;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
 }
 
 .checkoutcart {
@@ -115,6 +126,10 @@
   color: black;
   white-space: nowrap;
 }
+.logo-wrapper a {
+  text-decoration: none;
+  color: white;
+}
 
 @media (max-width: 375px) {
   .logo-wrapper h1 {
@@ -161,6 +176,7 @@
 .section-one-wrapper {
   height: 500px;
   width: 100%;
+  scroll-margin-top: 70px;
 }
 
 .background {
@@ -186,6 +202,9 @@
   font-size: 2.5rem;
   color: rgb(255, 255, 255);
 }
+.section-one-info h1 {
+  color: white;
+}
 
 @media (max-width: 405px) {
   .section-one-info h1 {
@@ -201,17 +220,19 @@
   width: 115px;
   border-radius: 25px;
   border: 2px solid black;
-  background-color: rgb(0, 255, 221);
+  background-color: #d4af37;
   font-family: "Nerko One", cursive;
   font-size: 1.1rem;
 }
 .ordernow-btn:hover {
-  background-color: white;
   transition: all 0.1s ease;
 }
 .ordernow-btn a {
   text-decoration: none;
   color: black;
+}
+.ordernow-btn a:hover {
+  color: white;
 }
 
 html {
@@ -225,21 +246,28 @@ html {
   align-items: center;
   height: 175px;
   width: 100%;
-  background-color: black;
+  background-color: #ad9b79;
   color: white;
   font-family: "Nerko One", cursive;
 }
+.breaker h1 {
+  color: white;
+}
 .breaker a {
   text-decoration: none;
-  color: rgb(0, 255, 221);
+  color: rgb(34, 34, 34);
   margin-top: 5px;
+}
+.breaker a:hover {
+  color: #d4af37;
 }
 
 .menu-results {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: rgb(0, 255, 221);
+  background-color: rgb(34, 34, 34);
+  scroll-margin-top: 70px;
 }
 
 .cookies-loading {
@@ -274,14 +302,18 @@ html {
   color: white;
 }
 
+h1 {
+  color: #ad9b79;
+}
+
 .menu-card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 400px;
-  width: 400px;
-  background-color: rgb(0, 255, 221);
+  width: 350px;
+  background-color: rgb(34, 34, 34);
   padding: 20px 0;
 }
 
@@ -294,7 +326,7 @@ html {
   flex-direction: column;
   align-items: center;
   font-family: "Nerko One", cursive;
-  color: rgb(34, 34, 34);
+  color: #ad9b79;
 }
 .menu-information h1 {
   font-size: 2.2rem;
@@ -302,7 +334,7 @@ html {
 }
 .menu-information p {
   font-size: 1.2rem;
-  color: rgb(34, 34, 34);
+  color: #ad9b79;
 }
 
 .menu-extras {
@@ -315,17 +347,22 @@ html {
 
 .menu-form {
   display: flex;
-  width: 30%;
+  width: 40%;
   justify-content: center;
+}
+.menu-form input {
+  background-color: #d4af37;
 }
 .menu-form button {
   font-family: "Nerko One", cursive;
   height: 34px;
-  width: 70px;
+  width: 100px;
   border: 2px solid black;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  background-color: #d4af37;
   color: black;
+  padding: 3px;
 }
 .menu-form button:hover {
   background-color: black;
@@ -354,12 +391,18 @@ html {
   margin: 0;
 }
 
+.section-three-wrapper {
+  width: 100%;
+  height: 150px;
+  background-color: #ad9b79;
+}
+
 .section-three-top {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 150px;
-  background-color: black;
+  padding-top: 30px;
+  background-color: #ad9b79;
 }
 
 .section-three-bottom {
@@ -368,13 +411,15 @@ html {
   align-items: center;
   font-size: 0.5rem;
   color: white;
-  background-color: black;
+  background-color: #ad9b79;
+  padding: 10px;
 }
 
 .section-three-left {
   display: flex;
-  justify-content: center;
-  height: 80%;
+  justify-content: space-around;
+  padding: 10px;
+  height: 100%;
   width: 50%;
   align-items: center;
   flex-wrap: wrap;
@@ -382,23 +427,23 @@ html {
 .section-three-left a {
   color: white;
   text-decoration: none;
-  margin: 5px 10px;
   font-family: "Nerko One", cursive;
 }
 .section-three-left a:hover {
-  color: rgb(0, 255, 221);
+  color: rgb(34, 34, 34);
 }
 
 .section-three-right {
   display: flex;
   justify-content: center;
-  height: 80%;
+  padding: 10px;
+  height: 100%;
   width: 50%;
 }
 
 .icon-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
   width: 100%;
@@ -407,10 +452,9 @@ html {
 .icon-container a {
   text-decoration: none;
   color: white;
-  margin: 10px;
 }
 .icon-container a:hover {
-  color: rgb(0, 255, 221);
+  color: rgb(34, 34, 34);
 }
 
 .icon-size {
@@ -418,6 +462,24 @@ html {
   width: 30px;
 }
 
+@media (max-width: 680px) {
+  .section-three-top {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .section-three-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+  }
+  .section-three-left a {
+    margin: 10px 0;
+  }
+}
 @media (min-width: 1600px) {
   .section-three-left a {
     font-size: 1.2rem;
@@ -484,7 +546,7 @@ html {
   color: black;
 }
 .actions-close-order .order-button {
-  background-color: rgb(0, 255, 221);
+  background-color: #8c7851;
   color: white;
 }
 
@@ -499,7 +561,7 @@ html {
 .button-finished {
   font: inherit;
   cursor: pointer;
-  background-color: rgb(0, 255, 221);
+  background-color: #8c7851;
   border: 1px solid black;
   padding: 0.5rem 2rem;
   border-radius: 25px;
@@ -566,7 +628,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid rgb(0, 255, 221);
+  border-bottom: 2px solid #8c7851;
   padding: 16px 0;
   margin: 16px 0;
 }
@@ -590,7 +652,7 @@ html {
   margin: 0.25rem;
 }
 .cart-item button:hover, .cart-item button:active {
-  background-color: rgb(0, 255, 221);
+  background-color: rgb(34, 34, 34);
   color: black;
 }
 
@@ -632,6 +694,16 @@ html {
 
 @media (min-width: 768px) {
   .actions {
+    flex-direction: row;
+  }
+}
+@media (max-width: 380px) {
+  .cart-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .actions {
+    display: flex;
     flex-direction: row;
   }
 }
@@ -695,7 +767,7 @@ html {
 
 .checkout-info-actions .checkout-info-submit {
   border: 2px solid black;
-  background-color: rgb(0, 255, 221);
+  background-color: #8c7851;
   color: white;
 }
 
@@ -722,4 +794,152 @@ html {
     height: auto;
     width: 100px;
   }
+}
+.about-section {
+  scroll-margin-top: 70px;
+  width: 100%;
+  height: auto;
+  background-color: rgb(34, 34, 34);
+  font-family: "Nerko One", cursive;
+}
+
+.about-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 175px;
+  background-color: #ad9b79;
+}
+.about-title h1 {
+  color: white;
+  font-family: "Nerko One", cursive;
+  font-size: 2.2rem;
+}
+
+.about-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+  height: 100%;
+  padding: 50px 0;
+}
+
+.about-cards {
+  border-radius: 20px;
+}
+
+.about-cards,
+.about-card-middle {
+  background-color: white;
+  padding: 10px;
+  width: 80%;
+  min-height: 125px;
+  margin: 50px 0;
+}
+.about-cards p,
+.about-card-middle p {
+  color: rgb(34, 34, 34);
+}
+
+.about-card-middle {
+  align-self: flex-end;
+  text-align: end;
+  border-radius: 20px;
+}
+
+.contact-section {
+  scroll-margin-top: 70px;
+  width: 100%;
+  height: auto;
+  background-color: rgb(34, 34, 34);
+  font-family: "Nerko One", cursive;
+}
+
+.contact-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 175px;
+  background-color: #ad9b79;
+}
+.contact-title h1 {
+  color: white;
+  font-family: "Nerko One", cursive;
+  font-size: 2.2rem;
+}
+
+.contactus-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  height: 50%;
+  width: 60%;
+  border-radius: 20px;
+  background-color: white;
+  font-family: inherit;
+}
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.contact-container form input {
+  font-family: "Nerko One", cursive;
+  padding: 10px;
+  border: 1px solid #ad9b79;
+}
+.contact-container form textarea {
+  font-family: "Nerko One", cursive;
+  border: 1px solid #ad9b79;
+  padding: 5px;
+}
+.contact-container form button {
+  font-family: inherit;
+  padding: 10px;
+  height: 40px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #d4af37;
+  color: black;
+  margin: 14px auto;
+}
+.contact-container form button:hover {
+  background-color: black;
+  color: white;
+}
+.contact-container form div {
+  display: flex;
+  width: 100%;
+}
+.contact-container form div input {
+  width: 50%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  max-width: 1450px;
+  margin: 0 auto;
 }/*# sourceMappingURL=main.module.css.map */

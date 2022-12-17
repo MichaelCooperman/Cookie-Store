@@ -4,7 +4,7 @@ import OrderNow from "./OrderNow";
 
 const SectionOne = () => {
   return (
-    <div className={classes["section-one-wrapper"]}>
+    <div id="topOfPage" className={classes["section-one-wrapper"]}>
       <div className={classes["background"]}>
         <div className={classes["section-one-info"]}>
           <h1>Cookies,</h1>

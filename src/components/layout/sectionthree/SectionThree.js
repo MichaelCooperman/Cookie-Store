@@ -7,18 +7,17 @@ import youtube from "../../../images/youtube-icon.png";
 
 const SectionThree = () => {
   return (
-    <div className={classes["section-three-wrapper"]}>
+    <footer className={classes["section-three-wrapper"]}>
       <div className={classes["section-three-top"]}>
         <div className={classes["section-three-left"]}>
-          <a href="null">Locations</a>
-
-          <a href="null">About Us</a>
-          <a href="null">Ship Cookies</a>
-          <a href="null">Email</a>
+          <a href="#Order">Order Today</a>
+          <a href="#About">About Us</a>
+          <a href="#Contact">Contact Us</a>
+          <a href="#topOfPage">To The Top</a>
         </div>
         <div className={classes["section-three-right"]}>
           <div className={classes["icon-container"]}>
-            <a href="null">
+            <a href="https://www.facebook.com/">
               <img
                 className={classes["icon-size"]}
                 src={facebook}
@@ -26,7 +25,7 @@ const SectionThree = () => {
               />
             </a>
 
-            <a href="null">
+            <a href="https://www.instagram.com/">
               <img
                 className={classes["icon-size"]}
                 src={instagram}
@@ -34,7 +33,7 @@ const SectionThree = () => {
               />
             </a>
 
-            <a href="null">
+            <a href="https://twitter.com/">
               <img
                 className={classes["icon-size"]}
                 src={twitter}
@@ -42,7 +41,7 @@ const SectionThree = () => {
               />
             </a>
 
-            <a href="null">
+            <a href="https://www.youtube.com/">
               <img
                 className={classes["icon-size"]}
                 src={youtube}
@@ -55,7 +54,7 @@ const SectionThree = () => {
       <div className={classes["section-three-bottom"]}>
         <h2>© 2022. All Rights Reserved</h2>
       </div>
-    </div>
+    </footer>
   );
 };
 

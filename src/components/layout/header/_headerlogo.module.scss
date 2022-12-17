@@ -13,6 +13,11 @@
     color: black;
     white-space: nowrap;
   }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 @media (max-width: 375px) {

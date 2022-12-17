@@ -1,12 +1,16 @@
 @use "../../../variables" as s;
 
+h1 {
+  color: s.$fontColor;
+}
+
 .menu-card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 400px;
-  width: 400px;
+  width: 350px;
   background-color: s.$mainBlue;
   padding: 20px 0;
 }

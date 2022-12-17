@@ -3,6 +3,7 @@
 .section-one-wrapper {
   height: 500px;
   width: 100%;
+  scroll-margin-top: 70px;
 }
 
 .background {
@@ -27,6 +28,10 @@
   font-family: s.$fontFamily;
   font-size: 2.5rem;
   color: s.$lightGray;
+
+  h1 {
+    color: white;
+  }
 }
 
 @media (max-width: 405px) {

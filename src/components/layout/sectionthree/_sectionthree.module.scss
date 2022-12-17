@@ -1,11 +1,17 @@
 @use "../../../variables" as s;
 
+.section-three-wrapper {
+  width: 100%;
+  height: 150px;
+  background-color: s.$secondaryColor;
+}
+
 .section-three-top {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 150px;
-  background-color: black;
+  padding-top: 30px;
+  background-color: s.$secondaryColor;
 }
 
 .section-three-bottom {
@@ -14,14 +20,15 @@
   align-items: center;
   font-size: 0.5rem;
   color: white;
-  background-color: black;
-  //   font-family: s.$fontFamily;
+  background-color: s.$secondaryColor;
+  padding: 10px;
 }
 
 .section-three-left {
   display: flex;
-  justify-content: center;
-  height: 80%;
+  justify-content: space-around;
+  padding: 10px;
+  height: 100%;
   width: 50%;
   align-items: center;
   flex-wrap: wrap;
@@ -29,7 +36,6 @@
   a {
     color: white;
     text-decoration: none;
-    margin: 5px 10px;
     font-family: s.$fontFamily;
 
     &:hover {
@@ -41,13 +47,14 @@
 .section-three-right {
   display: flex;
   justify-content: center;
-  height: 80%;
+  padding: 10px;
+  height: 100%;
   width: 50%;
 }
 
 .icon-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
   width: 100%;
@@ -56,7 +63,6 @@
   a {
     text-decoration: none;
     color: white;
-    margin: 10px;
 
     &:hover {
       color: s.$mainBlue;
@@ -67,6 +73,27 @@
 .icon-size {
   height: 30px;
   width: 30px;
+}
+
+@media (max-width: 680px) {
+  .section-three-top {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .section-three-left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+
+    a {
+      margin: 10px 0;
+    }
+  }
 }
 
 @media (min-width: 1600px) {

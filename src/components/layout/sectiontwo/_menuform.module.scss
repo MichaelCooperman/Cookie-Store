@@ -2,17 +2,23 @@
 
 .menu-form {
   display: flex;
-  width: 30%;
+  width: 40%;
   justify-content: center;
+
+  input {
+    background-color: s.$btnBackground;
+  }
 
   button {
     font-family: s.$fontFamily;
     height: 34px;
-    width: 70px;
+    width: 100px;
     border: 2px solid black;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    background-color: s.$btnBackground;
     color: black;
+    padding: 3px;
 
     &:hover {
       background-color: black;

@@ -78,11 +78,11 @@ const Menu = () => {
         <div className={classes["breaker"]}>
           <h1>Baked Fresh Every Day.</h1>
           <p>Have Any Cookie Suggestions?</p>
-          <a id="sectionOne" href="null">
-            Click Here!
-          </a>
+          <a href="null">Click Here!</a>
         </div>
-        <div className={classes["menu-results"]}>{cookieCard}</div>
+        <div id="Order" className={classes["menu-results"]}>
+          {cookieCard}
+        </div>
       </div>
     </React.Fragment>
   );

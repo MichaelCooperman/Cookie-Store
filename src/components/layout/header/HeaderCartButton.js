@@ -33,16 +33,22 @@ const HeaderCartButton = (props) => {
   }, [items]);
 
   return (
-    <div className={btnClasses} onClick={props.onClick}>
-      <button className={classes["checkoutcart-btn"]}>
-        <img
-          className={classes["checkoutcart"]}
-          src={cart}
-          alt="checkoutcart"
-        />
-        <span className={classes["badge"]}>{numberOfCartItems}</span>
-      </button>
-    </div>
+    <React.Fragment>
+      <nav className={classes["nav-bar"]}>
+        <a href="#About">About</a>
+        <a href="#Contact">Contact Us</a>
+      </nav>
+      <div className={btnClasses} onClick={props.onClick}>
+        <button className={classes["checkoutcart-btn"]}>
+          <img
+            className={classes["checkoutcart"]}
+            src={cart}
+            alt="checkoutcart"
+          />
+          <span className={classes["badge"]}>{numberOfCartItems}</span>
+        </button>
+      </div>
+    </React.Fragment>
   );
 };
 

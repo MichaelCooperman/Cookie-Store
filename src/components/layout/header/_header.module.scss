@@ -1,17 +1,12 @@
 @use "../../../variables" as s;
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .header-container {
   height: 70px;
   width: 100%;
   background-color: s.$mainBlue;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid s.$fontColor;
   overflow-x: hidden;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
 }
