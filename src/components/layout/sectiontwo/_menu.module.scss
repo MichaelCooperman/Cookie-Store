@@ -17,16 +17,22 @@ html {
 
   h1 {
     color: white;
+    text-align: center;
   }
 
   a {
     text-decoration: none;
     color: s.$mainBlue;
     margin-top: 5px;
+    text-align: center;
 
     &:hover {
       color: #d4af37;
     }
+  }
+
+  p {
+    text-align: center;
   }
 }
 

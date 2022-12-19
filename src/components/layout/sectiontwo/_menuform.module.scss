@@ -2,7 +2,8 @@
 
 .menu-form {
   display: flex;
-  width: 40%;
+  min-width: 50px;
+  width: 100%;
   justify-content: center;
 
   input {

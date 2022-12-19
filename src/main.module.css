@@ -245,6 +245,10 @@
 }
 .section-one-info h1 {
   color: white;
+  text-align: center;
+}
+.section-one-info h2 {
+  text-align: center;
 }
 
 @media (max-width: 405px) {
@@ -293,14 +297,19 @@ html {
 }
 .breaker h1 {
   color: white;
+  text-align: center;
 }
 .breaker a {
   text-decoration: none;
   color: rgb(34, 34, 34);
   margin-top: 5px;
+  text-align: center;
 }
 .breaker a:hover {
   color: #d4af37;
+}
+.breaker p {
+  text-align: center;
 }
 
 .menu-results {
@@ -353,13 +362,15 @@ h1 {
   align-items: center;
   flex-direction: column;
   height: 400px;
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   background-color: rgb(34, 34, 34);
   padding: 20px 0;
 }
 
 .menu-image {
-  height: 250px;
+  max-width: 250px;
+  width: 100%;
 }
 
 .menu-information {
@@ -372,10 +383,12 @@ h1 {
 .menu-information h1 {
   font-size: 2.2rem;
   color: white;
+  text-align: center;
 }
 .menu-information p {
   font-size: 1.2rem;
   color: #ad9b79;
+  text-align: center;
 }
 
 .menu-extras {
@@ -388,7 +401,8 @@ h1 {
 
 .menu-form {
   display: flex;
-  width: 40%;
+  min-width: 50px;
+  width: 100%;
   justify-content: center;
 }
 .menu-form input {
@@ -442,7 +456,6 @@ h1 {
   display: flex;
   align-items: center;
   width: 100%;
-  padding-top: 30px;
   background-color: #ad9b79;
 }
 
@@ -866,6 +879,7 @@ h1 {
   color: white;
   font-family: "Nerko One", cursive;
   font-size: 2.2rem;
+  text-align: center;
 }
 
 .about-cards-wrapper {
@@ -888,7 +902,7 @@ h1 {
   background-color: white;
   padding: 10px;
   width: 80%;
-  min-height: 125px;
+  min-height: 100px;
   margin: 50px 0;
 }
 .about-cards p,
