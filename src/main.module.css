@@ -566,7 +566,7 @@ h1 {
   list-style: none;
   margin: 0;
   padding: 0;
-  max-height: 380px;
+  max-height: 350px;
   overflow: auto;
 }
 
@@ -634,6 +634,11 @@ h1 {
   color: white;
 }
 
+@media (max-width: 600px) {
+  .cart-items {
+    max-height: 200px;
+  }
+}
 .backdrop {
   position: fixed;
   top: 0;
