@@ -3,6 +3,7 @@
 .nav-bar {
   height: 100%;
   width: 30%;
+  padding: 5px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -11,6 +12,7 @@
   a {
     text-decoration: none;
     color: s.$btnBackground;
+    font-family: s.$fontFamily;
     padding: 5px;
 
     &:hover {

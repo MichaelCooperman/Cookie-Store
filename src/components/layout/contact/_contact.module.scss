@@ -58,7 +58,8 @@
     textarea {
       font-family: s.$fontFamily;
       border: 1px solid s.$secondaryColor;
-      padding: 5px;
+      padding: 10px;
+      width: 100%;
     }
 
     button {
@@ -83,9 +84,47 @@
       width: 100%;
 
       input {
-        width: 50%;
+        width: 100%;
       }
     }
+  }
+}
+
+.contactus-info-control {
+  margin-bottom: 5px;
+}
+
+.contactus-info-control {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  input {
+    width: 100%;
+  }
+
+  p {
+    display: none;
+  }
+}
+
+.contactus-invalid {
+  form {
+    input {
+      border: 1px solid red;
+      background-color: #ffeff1;
+    }
+
+    textarea {
+      border-color: red;
+    }
+  }
+
+  p {
+    display: block;
+    color: red;
+    align-self: start;
   }
 }
 

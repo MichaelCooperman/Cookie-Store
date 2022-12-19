@@ -19,6 +19,15 @@ function App() {
     setCartIsActive(false);
   };
 
+  const submitContactForm = (userInfo) => {
+    fetch("https://cookies-21f67-default-rtdb.firebaseio.com/emails.json", {
+      method: "POST",
+      body: JSON.stringify({
+        user: userInfo,
+      }),
+    });
+  };
+
   return (
     <main>
       <CartProvider>
@@ -27,7 +36,7 @@ function App() {
         <SectionOne />
         <SectionTwo />
         <About />
-        <Contact />
+        <Contact onConfirm={submitContactForm} />
         <SectionThree />
       </CartProvider>
     </main>
