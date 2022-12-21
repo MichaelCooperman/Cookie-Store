@@ -35,7 +35,7 @@ const AboutCard = () => {
           now use drones! With new advancements in technology we have over 1,000
           cookie drones that deliver within 4 hours of your order being placed.
           Another fun fact is Daydream cookies is the first cookie company to go
-          international. Order any and where any time.
+          international. Order any where and any time.
         </p>
       </div>
     </div>
