@@ -1,8 +1,16 @@
 @use "../../../variables" as s;
 
+.res-section-one {
+  display: flex;
+  justify-content: center;
+  background-color: s.$mainBlue;
+  width: 100%;
+}
+
 .section-one-wrapper {
   height: 500px;
   width: 100%;
+  max-width: 1400px;
   scroll-margin-top: 70px;
 }
 

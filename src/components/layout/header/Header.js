@@ -6,13 +6,15 @@ import HeaderLogo from "./HeaderLogo";
 
 const Header = (props) => {
   return (
-    <header className={classes["header-container"]}>
-      <div className={classes["header"]}>
-        {/* <HeaderMenu /> */}
-        <HeaderLogo />
-        <HeaderCartButton onClick={props.onShowCart} />
-      </div>
-    </header>
+    <section className={classes["res-header"]}>
+      <header className={classes["header-container"]}>
+        <div className={classes["header"]}>
+          {/* <HeaderMenu /> */}
+          <HeaderLogo />
+          <HeaderCartButton onClick={props.onShowCart} />
+        </div>
+      </header>
+    </section>
   );
 };
 

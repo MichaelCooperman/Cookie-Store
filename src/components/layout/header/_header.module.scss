@@ -1,8 +1,15 @@
 @use "../../../variables" as s;
 
+.res-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: s.$mainBlue;
+}
+
 .header-container {
   height: 70px;
-  width: 100%;
+  max-width: 1400px;
   background-color: s.$mainBlue;
   border-bottom: 2px solid s.$fontColor;
   overflow-x: hidden;

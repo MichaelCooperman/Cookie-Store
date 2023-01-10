@@ -3,9 +3,9 @@ import Menu from "./Menu";
 
 const SectionTwo = () => {
   return (
-    <div>
-      <Menu />
-    </div>
+    // <div>
+    <Menu />
+    // </div>
   );
 };
 

@@ -1,6 +1,24 @@
 @use "../../../variables" as s;
 
+.res-contact-top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: s.$secondaryColor;
+}
+
+.res-contact-main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  background-color: s.$mainBlue;
+}
+
 .contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   scroll-margin-top: 70px;
   width: 100%;
   height: auto;

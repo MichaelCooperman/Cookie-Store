@@ -5,10 +5,14 @@ import AboutCard from "./AboutCard";
 const About = () => {
   return (
     <section id="About" className={classes["about-section"]}>
-      <div className={classes["about-title"]}>
-        <h1>Learn More About Us!</h1>
+      <div className={classes["res-about-top"]}>
+        <div className={classes["about-title"]}>
+          <h1>Learn More About Us!</h1>
+        </div>
       </div>
-      <AboutCard />
+      <div className={classes["res-about-main"]}>
+        <AboutCard />
+      </div>
     </section>
   );
 };

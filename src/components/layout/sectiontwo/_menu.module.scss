@@ -4,13 +4,27 @@ html {
   scroll-behavior: smooth;
 }
 
+.res-section-two-top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: s.$secondaryColor;
+}
+
+.res-section-two-main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: s.$mainBlue;
+}
+
 .breaker {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 175px;
-  width: 100%;
+  max-width: 1400px;
   background-color: s.$secondaryColor;
   color: white;
   font-family: s.$fontFamily;
@@ -21,13 +35,14 @@ html {
   }
 
   a {
+    font-size: 1.2rem;
     text-decoration: none;
     color: s.$mainBlue;
     margin-top: 5px;
     text-align: center;
 
     &:hover {
-      color: #d4af37;
+      color: white;
     }
   }
 
@@ -37,6 +52,7 @@ html {
 }
 
 .menu-results {
+  max-width: 1400px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

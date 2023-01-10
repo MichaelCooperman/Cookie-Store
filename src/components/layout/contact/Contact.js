@@ -1,144 +1,65 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import classes from "../../../main.module.css";
+import emailjs from "@emailjs/browser";
 
-const noValue = (value) => value.trim() === "";
-const isEmail = (value) => value.includes("@");
+const Contact = () => {
+  const form = useRef();
 
-const Contact = (props) => {
-  const [nameValue, setNameValue] = useState();
-  const [emailValue, setEmailValue] = useState();
-  const [subjectValue, setSubjectValue] = useState();
-  const [messageValue, setMessageValue] = useState();
-
-  const [emailFormIsValid, setEmailFormIsValid] = useState({
-    name: true,
-    email: true,
-    subject: true,
-    message: true,
-  });
-
-  const nameInputRef = useRef();
-  const emailInputRef = useRef();
-  const subjectInputRef = useRef();
-  const messageInputRef = useRef();
-
-  const sendMessageHandler = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    const enteredName = nameInputRef.current.value;
-    const enteredEmail = emailInputRef.current.value;
-    const enteredSubject = subjectInputRef.current.value;
-    const enteredMessage = messageInputRef.current.value;
-
-    const enteredNameIsValid = !noValue(enteredName);
-    const enteredEmailIsValid = isEmail(enteredEmail);
-    const enteredSubjectIsValid = !noValue(enteredSubject);
-    const enteredMessageIsValid = !noValue(enteredMessage);
-
-    setEmailFormIsValid({
-      name: enteredNameIsValid,
-      email: enteredEmailIsValid,
-      subject: enteredSubjectIsValid,
-      message: enteredMessageIsValid,
-    });
-
-    const entireFormIsValid =
-      enteredNameIsValid &&
-      enteredEmailIsValid &&
-      enteredSubjectIsValid &&
-      enteredMessageIsValid;
-
-    if (!entireFormIsValid) {
-      return;
-    }
-
-    props.onConfirm({
-      name: enteredName,
-      email: enteredEmail,
-      subject: enteredSubject,
-      message: enteredMessage,
-    });
-
-    setNameValue("");
-    setEmailValue("");
-    setSubjectValue("");
-    setMessageValue("");
+    emailjs
+      .sendForm(
+        "service_89kgjki",
+        "template_9gwn3i8",
+        form.current,
+        "K-P0Lrcjx9aic3gfj"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   };
-
-  const nameControlClasses = `${classes["contactus-info-control"]} ${
-    emailFormIsValid.name ? "" : classes["contactus-invalid"]
-  }`;
-
-  const emailControlClasses = `${classes["contactus-info-control"]} ${
-    emailFormIsValid.email ? "" : classes["contactus-invalid"]
-  }`;
-
-  const subjectControlClasses = `${classes["contactus-info-control"]} ${
-    emailFormIsValid.subject ? "" : classes["contactus-invalid"]
-  }`;
-
-  const messageControlClasses = `${classes["contactus-info-control"]} ${
-    emailFormIsValid.message ? "" : classes["contactus-invalid"]
-  }`;
 
   return (
     <section id="Contact" className={classes["contact-section"]}>
-      <div className={classes["contact-title"]}>
-        <h1>Contact Us!</h1>
+      <div className={classes["res-contact-top"]}>
+        <div className={classes["contact-title"]}>
+          <h1>Contact Us!</h1>
+        </div>
       </div>
-      <div className={classes["contactus-wrapper"]}>
-        <div className={classes["contact-container"]}>
-          <h1>Send Us An Email</h1>
-          <form onSubmit={sendMessageHandler}>
-            <div className={classes["contact-form-fix-1"]}>
-              <div className={nameControlClasses}>
-                <input
-                  ref={nameInputRef}
-                  type="text"
-                  placeholder="Full Name"
-                  id="user_name"
-                  value={nameValue}
-                />
-                {!emailFormIsValid.name && <p>Please enter a valid Name!</p>}
+      <div className={classes["res-contact-main"]}>
+        <div className={classes["contactus-wrapper"]}>
+          <div className={classes["contact-container"]}>
+            <h1>Send Us An Email</h1>
+            <form ref={form} onSubmit={sendEmail}>
+              <div className={classes["contact-form-fix-1"]}>
+                <div className={classes["contactus-info-control"]}>
+                  <input type="text" placeholder="Full Name" name="user_name" />
+                </div>
+                <div className={classes["contactus-info-control"]}>
+                  <input type="text" placeholder="Email" name="user_email" />
+                </div>
               </div>
-              <div className={emailControlClasses}>
-                <input
-                  ref={emailInputRef}
-                  type="text"
-                  placeholder="Email"
-                  id="user_email"
-                  value={emailValue}
-                />
-                {!emailFormIsValid.email && <p>Please enter a valid Email!</p>}
+              <div className={classes["contactus-info-control"]}>
+                <input type="text" placeholder="Subject" name="subject" />
               </div>
-            </div>
-            <div className={subjectControlClasses}>
-              <input
-                ref={subjectInputRef}
-                type="text"
-                placeholder="Subject"
-                id="subject"
-                value={subjectValue}
-              />
-              {!emailFormIsValid.subject && (
-                <p>Please enter a valid Subject!</p>
-              )}
-            </div>
-            <div className={messageControlClasses}>
-              <textarea
-                ref={messageInputRef}
-                placeholder="Your Message to us..."
-                id="message"
-                cols="30"
-                rows="10"
-                value={messageValue}
-              />
-              {!emailFormIsValid.message && (
-                <p>Please enter a valid Message!</p>
-              )}
-            </div>
-            <button>Send Message</button>
-          </form>
+              <div className={classes["contactus-info-control"]}>
+                <textarea
+                  placeholder="Your Message to us..."
+                  name="message"
+                  cols="30"
+                  rows="10"
+                />
+              </div>
+              <button>Send Message</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

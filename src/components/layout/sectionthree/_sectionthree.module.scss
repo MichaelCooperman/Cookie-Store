@@ -1,7 +1,15 @@
 @use "../../../variables" as s;
 
+.res-section-three {
+  display: flex;
+  justify-content: center;
+  background-color: s.$secondaryColor;
+  width: 100%;
+}
+
 .section-three-wrapper {
   width: 100%;
+  max-width: 1400px;
   height: 150px;
   background-color: s.$secondaryColor;
 }

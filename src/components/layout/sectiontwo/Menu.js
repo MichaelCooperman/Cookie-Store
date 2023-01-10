@@ -74,16 +74,20 @@ const Menu = () => {
 
   return (
     <React.Fragment>
-      <div className={classes["menu-wrapper"]}>
+      {/* <div className={classes["menu-wrapper"]}> */}
+      <section className={classes["res-section-two-top"]}>
         <div className={classes["breaker"]}>
           <h1>Baked Fresh Every Day.</h1>
           <p>Have Any Cookie Suggestions?</p>
           <a href="null">Click Here!</a>
         </div>
+      </section>
+      <section className={classes["res-section-two-main"]}>
         <div id="Order" className={classes["menu-results"]}>
           {cookieCard}
         </div>
-      </div>
+      </section>
+      {/* </div> */}
     </React.Fragment>
   );
 };
